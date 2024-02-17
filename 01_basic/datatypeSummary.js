@@ -84,7 +84,7 @@ let userEmail = undefined;
 const id = Symbol('123')
 const anotherId = Symbol('123')
 
-console.log(id === anotherId);
+// console.log(id === anotherId);
 
 // const bigNumber = 26326262363636899n;
 
@@ -92,15 +92,37 @@ console.log(id === anotherId);
 
 // Array, Objects, functions
 
-const heros = ["shaktiman", "naagarj", "shhhjxx"];
+// const heros = ["shaktiman", "naagarj", "shhhjxx"];
 
-const myObj = {
-    name: "hitesh",
-    age: 22
+// const myObj = {
+//     name: "hitesh",
+//     age: 22
+// }
+
+// const myfunction = function(){functions
+//     console.log("Hello World");
+// }
+
+// console.log(typeof myfunction);
+
+// ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// stack(primitive), Heap (Non-Primitive)
+
+let myYouTubeName = "rupeshviranidotcom";
+let anotherName= myYouTubeName;
+anotherName= "chaiORcode";
+
+// console.log(myYouTubeName);
+// console.log(anotherName);
+
+let userOne = {
+    email: "user@google.com",
+    upi: "user@ybl",
 }
 
-const myfunction = function(){functions
-    console.log("Hello World");
-}
+let userTwo = userOne;
+userTwo.email= "rupeshvirani01@gmail.com";
 
-console.log(typeof myfunction);
+console.log(userOne.email);
+console.log(userTwo.email);
