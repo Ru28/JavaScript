@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closure aur chai</title>
+</head>
+<body style="background-color: #414141; color:white">
+    <button id="orange">Orange</button>
+    <button id="green">Green</button>
+</body>
+<script>
+    // function init(){
+    //     let name = "Mozilla";
+    //     function displayName(){
+    //         console.log(name);
+    //     }
+    //     displayName();
+    // }
+    // init();
+
+    // function outer(){
+    //     let username = "hitesh";
+    //     console.log("OUTER", secret);
+    //     function innerOne(){
+    //         let secret = "my123";
+    //         console.log("innerOne",username);
+    //     }
+    //     function innerTwo(){
+    //         console.log("innerTwo", username);
+    //         console.log(secret);
+    //     }
+    //     innerOne();
+    //     innerTwo();
+    // }
+    // outer();
+    // console.log("TOO OUTER", username);
+
+    function makeFunc(){
+        const name = "Mozilla";
+        function displayName() {
+            console.log(name);
+        }
+        return displayName;
+    }
+
+    const myFunc = makeFunc();
+    myFunc();
+    
+
+
+
+    // Function to execute after a dynamically calculated time
+
+    // function myFunction(index) {
+    //     console.log("Delayed function executed for index:", index);
+    // }
+
+    // // Number of iterations
+    // const numIterations = 5;
+
+    // // Initial delay time
+    // let initialDelay = 1000; // 1 second
+
+    // // Increment for each iteration
+    // let delayIncrement = 1000; // 1 second
+
+    // // Loop to create setTimeout calls with incrementally increasing delay times
+    // for (let i = 0; i < numIterations; i++) {
+    //     setTimeout(myFunction, initialDelay + (i * delayIncrement), i);
+    // }
+</script>
+
+<script>
+    // document.getElementById("orange").addEventListener('click',()=>{
+    //     document.body.style.backgroundColor=`orange`;
+    // })
+
+    // document.getElementById("green").addEventListener('click',()=>{
+    //     document.body.style.backgroundColor=`green`;
+    // })
+
+    function clickHandler(color){
+        
+        return function(){
+            document.body.style.backgroundColor = `${color}`;
+        }
+    }
+
+    document.getElementById('orange').onclick =  clickHandler("orange");
+    document.getElementById('green').onclick =  clickHandler("green");
+</script>
+</html>
